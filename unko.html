@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥺</title>
+    <link rel="stylesheet" href="css/destyle.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="pien-big-wrapper">
+                <a href="index.html">
+                    <img src="img/pien-t.png" class="pien-big">
+                </a>
+            </div>
+            <div class="pien-random-wrapper">
+            </div>
+        </div>
+    </main>
+
+    <style>
+        body {
+            background: #000;
+        }
+
+        a {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .pien-big-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            animation: pien-bigger 1s linear alternate infinite;
+            width: 0px;
+            height: 0px;
+        }
+
+
+        .pien-random-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .piens {
+            display: inline-block;
+            position: absolute;
+            color: yellow;
+        }
+
+        @keyframes pien-bigger {
+            100% {
+                width: 800px;
+                height: 800px;
+            }
+        }
+    </style>
+
+    <script>
+        'use strict';
+
+        const getRandomInt = (min = 0, max = 97) => Math.round(Math.random() * (max - min) + min);
+        const pienRandomWrapper = document.querySelector(".pien-random-wrapper");
+        let piens = "";
+        for (let i = 0; i < 1000; i++) {
+            piens += `<div class="piens pien${i + 1}"> <img src="img/pien-t.png"></div>`;
+        }
+        pienRandomWrapper.innerHTML = piens;
+
+        const pienpiens = document.querySelectorAll(".piens");
+        const style = document.styleSheets[1];
+        let keyframes = "";
+        pienpiens.forEach((pienpien, index) => {
+            pienpien.style.width = `${getRandomInt(5, 30)}px`;
+            pienpien.style.animation = `pienMove${index} ${getRandomInt(3, 20)}s linear alternate infinite`;
+            keyframes = `@keyframes pienMove${index} {
+                0% {top: ${getRandomInt()}vh; left: ${getRandomInt()}vw;}
+                25% {top: ${getRandomInt()}vh; left: ${getRandomInt()}vw;}
+                50% {top: ${getRandomInt()}vh; left: ${getRandomInt()}vw;}
+                75% {top: ${getRandomInt()}vh; left: ${getRandomInt()}vw;}
+                100% {top: ${getRandomInt()}vh; left: ${getRandomInt()}vw;}
+            }`
+            style.insertRule(keyframes);
+        });
+    </script>
+
+</body>
+
+</html>

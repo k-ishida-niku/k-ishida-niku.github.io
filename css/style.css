@@ -1,0 +1,481 @@
+﻿@charset "utf-8";
+
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+  background-color: #f7efe6;
+
+}
+
+.service_bg,
+footer p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  display: block;
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  font-size: 1.01em;
+  font-weight: bold;
+  color: #dd1b57;
+}
+
+span.small {
+  color: rgb(129, 115, 115);
+  font-size: 0.8em;
+}
+
+.content_img {
+  margin-bottom: 2vh;
+}
+
+/********** footer ***********/
+footer {
+  padding: 5vh 0;
+  background-color: #fadfdf;
+  line-height: 10vh;
+  text-align: center;
+}
+
+.footer_nav {
+  width: 80%;
+  margin: 0 auto 5vh;
+}
+
+.footer_nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  gap: 1em;
+}
+
+.footer_nav ul li {
+  /* border: #000 1px solid; */
+  border-radius: 30px;
+  background-color: #f8b7b7;
+}
+
+
+
+.copy {
+  font-size: 14px;
+}
+
+/****************** ヘッダー ***********************/
+
+
+header h1 a {
+  width: 70%;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #fadfdf;
+  padding: 2vh 0 2vh 2vw;
+  line-height: 0;
+}
+
+
+/************ ハンバーガーメニュー *************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fadfdf;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.hambarger {
+  box-sizing: border-box;
+  margin: 0;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 2vh;
+  right: 1vw;
+  background-color: #fa5b68;
+  border-radius: 10px;
+}
+
+
+
+header span {
+  display: block;
+  width: 60%;
+  height: 0.5vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100000;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.bar01 {
+  top: 30%;
+}
+
+.bar02 {}
+
+.bar03 {
+  top: 70%;
+}
+
+
+
+
+.bar01.open {
+  transform: rotate(45deg);
+  top: 50%;
+  left: 10%;
+
+}
+
+.bar02.open {
+  opacity: 0;
+}
+
+.bar03.open {
+  transform: rotate(-45deg);
+  top: 50%;
+  left: 10%;
+}
+
+/******* sp_navi *******/
+
+.nav-box {
+  padding: 96px 0 0 40px;
+  width: 200px;
+  height: 100vh;
+  background-color: #dd1b57;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: -1000px;
+  visibility: hidden;
+  line-height: 3;
+  transition: 0.5s;
+  z-index: 10000;
+}
+
+.nav_bg {
+  width: 100%;
+  height: 100vh;
+  background-color: #71153276;
+  position: fixed;
+  top: 0;
+  right: -1000px;
+  visibility: hidden;
+  z-index: 9999;
+  transition: 0.3s;
+
+}
+
+.nav-nav {
+  /* display: block; */
+  visibility: visible;
+
+  top: 0;
+  right: 0;
+}
+
+.nav-box ul li:first-child {
+  opacity: 0.8;
+}
+
+
+/********** hero ***********/
+.hero-img {
+  width: 90%;
+  margin: 0 auto 3vh;
+}
+
+
+
+
+/******* パンクズリスト *******/
+.pankuzu {
+  margin-bottom: 10vh;
+  background-color: rgb(222, 247, 199);
+}
+
+ol {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: flex-start;
+  width: 337px;
+  margin: 0 auto;
+  color: #2397f5;
+  font-size: 12px;
+}
+
+ol li a::after {
+  content: ">";
+  margin: 0 2vw;
+}
+
+.lastkuzu a {
+  color: #000;
+  font-weight: bold;
+}
+
+.lastkuzu a::after {
+  content: none;
+}
+
+/******* main *******/
+main {
+  padding-top: 15vh;
+}
+
+/******** main ********/
+
+.hero {
+  margin-bottom: 10vh;
+}
+
+.contents_wrap {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.title_box {
+  width: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  border-radius: 20px;
+  margin: 5vh auto 5vh;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub-title {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+
+.main_content {
+  width: 95%;
+  margin: 0 auto;
+  border: dashed 5px #f5ba42;
+  padding: 2vh 5vw;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+main h2 {
+  font-size: 3em;
+  color: #996e13;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 1.5em;
+  margin: -2vh 0 2vh;
+  text-align: center;
+  color: #cdc78c;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+  border-left: 8px solid rgb(253, 247, 53);
+  padding-left: 2vw;
+  color: #1b86dd;
+  margin-bottom: 5vh;
+}
+
+.main_content p {
+  margin-bottom: 5vh;
+}
+
+.main_content .last_text {
+  margin-bottom: 10vh;
+}
+
+.all-last_text {
+  margin-bottom: 2vh;
+}
+
+.for-top a {
+  width: 60%;
+  margin: 5vh auto 20vh;
+  font-size: 1.2em;
+  line-height: 10vh;
+  background-color: #dd1b57;
+  padding: 0 2vw;
+  color: #fff;
+  box-shadow: 0 10px 0 #711532;
+  border-radius: 10px;
+}
+
+/********* article **********/
+.article_wrap {
+  width: 90%;
+  margin: 0 auto 10vh;
+  background-color: #fff;
+  padding: 3vh 5vw;
+  border-radius: 5px;
+}
+
+h4 {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto 2vh;
+  border-bottom: 1px solid #000;
+}
+
+.a-item_title {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.article_text {
+  font-size: 0.7em;
+}
+
+
+
+
+.article_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 3px 3px 5px #ddd,
+    -3px -3px 5px #ddd,
+    -3px 3px 5px #ddd,
+    3px -3px 5px #ddd;
+  padding: 2vh 5vw;
+  border-radius: 10px;
+
+}
+
+.article_img {
+  width: 50%;
+}
+
+.article_description {
+  width: 45%;
+}
+
+.article_link {
+  margin-bottom: 3vh;
+}
+
+
+/* 肉塊マンボタンのcss */
+.link_button,
+.link_button02 {
+  text-align: center;
+  width: 75%;
+  background-color: #f5ba42;
+  margin: 0 0 0 auto;
+  border-radius: 5px;
+  padding: 0 2vw;
+  line-height: 8vh;
+  color: #fff;
+  font-weight: bold;
+}
+
+.link_button02 {
+  background-color: red;
+  display: none;
+}
+
+.button_open {
+  display: none;
+}
+
+.button_close {
+  display: block;
+}
+
+/*********** cm ***********/
+.cm_wrap {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10vh 5vw;
+}
+
+.baner01 {
+  margin-bottom: 5vh;
+}
+
+.baner01,
+.baner02 {
+  position: relative;
+}
+
+.cm-text {
+  color: #2397f5;
+  background-color: #fff;
+  font-size: 0.8em;
+  padding: 0 1vw;
+  position: absolute;
+}
+
+/******** 肉塊マン *********/
+
+.niku_box {
+  width: 100%;
+  background-color: #dd1b57;
+  writing-mode: vertical-rl;
+  margin-bottom: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.niku {
+  display: none;
+  text-align: center;
+  font-size: 5em;
+  color: #f7efe6;
+}
+
+/* .nikukaiman_box {
+  animation-name: nikukaiman_box;
+  animation-duration: 0.01s;
+  animation-fill-mode: forwards;
+} */
+
+/* @keyframes nikukaiman_box {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 125vh;
+  }
+} */
+
+.nikukaiman {
+  display: block;
+  height: 125vh;
+  color: #fff;
+  top: 0;
+  left: 0;
+}
